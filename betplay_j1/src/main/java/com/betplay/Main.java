@@ -1,8 +1,13 @@
 package com.betplay;
 
+
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.betplay.model.Equipo;
+import com.betplay.model.Player;
+
 public class Main {
 
     public static void clearScreen() {
@@ -23,6 +28,7 @@ public class Main {
 
         ArrayList<Equipo> equipos = new ArrayList<Equipo>();
         ArrayList<Fecha> fechas = new ArrayList<Fecha>();
+        ArrayList<Player> players = new ArrayList<Player>();
 
         boolean isActive = true;
 
@@ -31,7 +37,7 @@ public class Main {
             clearScreen();
 
             System.out.println("---LIGA BETPLAY---");
-            System.out.println(" 1. REGISTRAR UN EQUIPO\n 2. REGISTRAR UNA FECHA\n 3. REPORTES\n 4. DETENER LA EJECUCION");
+            System.out.println(" 1. REGISTRAR UN EQUIPO\n 2. REGISTRAR UNA FECHA\n 3. REPORTES\n 4.REGISTRAR JUGADOR\n 4. DETENER LA EJECUCION");
 
 
             try {
@@ -234,6 +240,12 @@ public class Main {
 
                         System.out.println(reportes);
                         sc.nextLine();
+                    }
+
+                    case 4 -> {
+                        clearScreen();
+                        
+
                     }
 
                     default -> {
